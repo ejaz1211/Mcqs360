@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCQ Mastery — Premium Exam Preparation & Online Practice</title>
+  <meta name="description" content="Master competitive exams with premium MCQ practice. Explore subject-wise tests, instant feedback, and self-paced learning for government jobs, entry tests, and more.">
+  <style>
+    /* --------------------------------------------
+       RESET & GLOBAL DESIGN SYSTEM
+    -------------------------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #0a1a2b;
+      --navy-light: #112b44;
+      --white: #ffffff;
+      --blue: #1e6fdb;
+      --blue-bright: #3a8dff;
+      --cyan: #2dd4bf;
+      --gold: #f5c542;
+      --gray-soft: #f4f7fc;
+      --gray-border: #dfe7f0;
+      --text-dark: #0d1e2e;
+      --text-muted: #435569;
+      --shadow-sm: 0 6px 18px rgba(0, 20, 40, 0.06);
+      --shadow-md: 0 12px 30px rgba(0, 20, 40, 0.12);
+      --shadow-lg: 0 24px 48px rgba(0, 20, 40, 0.18);
+      --radius: 20px;
+      --radius-sm: 12px;
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--white);
+      color: var(--text-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --------------------------------------------
+       TYPOGRAPHY & ACCESSIBILITY
+    -------------------------------------------- */
+    h1, h2, h3 {
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      color: var(--white);
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+      color: var(--navy-light);
+    }
+
+    p {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    a {
+      color: var(--blue-bright);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--cyan);
+      text-decoration: underline;
+    }
+
+    /* Focus outlines for accessibility */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* --------------------------------------------
+       HEADER & NAV
+    -------------------------------------------- */
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 0.85rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: -0.5px;
+      color: var(--white);
+    }
+
+    .logo-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      border-radius: 10px;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(45, 212, 191, 0.3);
+    }
+
+    .logo span {
+      color: var(--cyan);
+      font-weight: 800;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: rgba(255, 255, 255, 0.82);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--white);
+      border-bottom-color: var(--cyan);
+      text-decoration: none;
+    }
+
+    /* --------------------------------------------
+       HERO SECTION
+    -------------------------------------------- */
+    .hero {
+      background: linear-gradient(145deg, var(--navy) 0%, #0c2540 100%);
+      color: var(--white);
+      padding: 4.5rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* CSS decorative circles */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(45, 212, 191, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(58, 141, 255, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      align-items: center;
+      gap: 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-content .subheadline {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 540px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(45, 212, 191, 0.15);
+      border: 1px solid rgba(45, 212, 191, 0.4);
+      color: var(--cyan);
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+
+    /* Decorative floating cards */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .floating-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      width: 100%;
+      max-width: 320px;
+      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.35);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-card .card-line {
+      height: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    .floating-card .card-line.short {
+      width: 60%;
+    }
+
+    .floating-card .card-line.medium {
+      width: 80%;
+    }
+
+    .floating-card .card-highlight {
+      height: 10px;
+      width: 40%;
+      background: var(--cyan);
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .floating-card .card-tag {
+      display: inline-block;
+      padding: 0.3rem 0.9rem;
+      background: rgba(245, 197, 66, 0.2);
+      border: 1px solid rgba(245, 197, 66, 0.5);
+      border-radius: 30px;
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 0.6rem;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-14px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* --------------------------------------------
+       INTRO SECTION
+    -------------------------------------------- */
+    .intro {
+      padding: 5rem 0 4rem;
+      background: var(--white);
+    }
+
+    .intro-content {
+      max-width: 880px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro-content h2 {
+      margin-bottom: 1.4rem;
+    }
+
+    .intro-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+
+    .intro-content a {
+      font-weight: 700;
+    }
+
+    /* --------------------------------------------
+       POPULAR SUBJECTS — CARDS
+    -------------------------------------------- */
+    .subjects {
+      padding: 4rem 0 5rem;
+      background: var(--gray-soft);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header p {
+      max-width: 620px;
+      margin: 0.5rem auto 0;
+      font-size: 1.05rem;
+    }
+
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.6rem;
+    }
+
+    .subject-card {
+      background: var(--white);
+      padding: 1.8rem 1.4rem;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-border);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      cursor: default;
+    }
+
+    .subject-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--blue-bright);
+    }
+
+    .subject-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
+      color: var(--white);
+      font-weight: 700;
+      box-shadow: 0 6px 14px rgba(30, 111, 219, 0.25);
+    }
+
+    .subject-card h3 {
+      margin-bottom: 0.4rem;
+    }
+
+    .subject-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* --------------------------------------------
+       EXAM PREPARATION
+    -------------------------------------------- */
+    .exam-prep {
+      padding: 5rem 0;
+      background: var(--white);
+    }
+
+    .exam-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .exam-item {
+      padding: 1.8rem;
+      background: var(--gray-soft);
+      border-radius: var(--radius-sm);
+      border-left: 5px solid var(--blue);
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .exam-item:hover {
+      border-left-color: var(--cyan);
+      background: #eef4fe;
+    }
+
+    .exam-item h3 {
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .exam-item h3 span {
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .exam-item p {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    /* --------------------------------------------
+       KEY FEATURES
+    -------------------------------------------- */
+    .features {
+      padding: 5rem 0;
+      background: linear-gradient(145deg, var(--navy) 0%, #0e223a 100%);
+      color: var(--white);
+    }
+
+    .features .section-header h2 {
+      color: var(--white);
+    }
+
+    .features .section-header p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-sm);
+      padding: 1.8rem 1.5rem;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .feature-card .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .feature-card h3 {
+      color: var(--white);
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.94rem;
+    }
+
+    /* --------------------------------------------
+       BENEFITS OF MCQ PRACTICE
+    -------------------------------------------- */
+    .benefits {
+      padding: 5rem 0;
+      background: var(--white);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+      align-items: start;
+    }
+
+    .benefit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .benefit-list li {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .benefit-check {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(45, 212, 191, 0.35);
+    }
+
+    .benefit-list h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .benefit-list p {
+      font-size: 0.95rem;
+    }
+
+    .benefits-highlight {
+      background: var(--gray-soft);
+      padding: 2.2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .benefits-highlight h3 {
+      color: var(--blue);
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .benefits-highlight p {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    /* --------------------------------------------
+       FAQ SECTION
+    -------------------------------------------- */
+    .faq {
+      padding: 5rem 0;
+      background: var(--gray-soft);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.6rem;
+      margin-top: 2.5rem;
+    }
+
+    .faq-item {
+      background: var(--white);
+      padding: 1.6rem 1.8rem;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-border);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .faq-item:hover {
+      border-color: var(--cyan);
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-item h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
+    }
+
+    .faq-item p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+    }
+
+    /* --------------------------------------------
+       CONCLUSION
+    -------------------------------------------- */
+    .conclusion {
+      padding: 4.5rem 0;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .conclusion p {
+      max-width: 800px;
+      margin: 1rem auto 0;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+
+    /* --------------------------------------------
+       FOOTER
+    -------------------------------------------- */
+    footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.75);
+      padding: 3rem 0 1.8rem;
+      border-top: 3px solid var(--cyan);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.95rem;
+      margin-top: 0.8rem;
+      max-width: 320px;
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 0.4rem;
+    }
+
+    footer h4 {
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 0.3px;
+    }
+
+    footer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    footer ul li {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.8rem;
+      text-align: center;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* --------------------------------------------
+       RESPONSIVE BREAKPOINTS
+    -------------------------------------------- */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .hero-visual {
+        justify-content: flex-start;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+
+      .hero {
+        padding: 3rem 0 3.5rem;
+      }
+
+      .hero-content .subheadline {
+        font-size: 1rem;
+      }
+
+      .intro,
+      .subjects,
+      .exam-prep,
+      .features,
+      .benefits,
+      .faq,
+      .conclusion {
+        padding: 3rem 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+      }
+
+      .subjects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .subjects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content h1 {
+        font-size: 1.9rem;
+      }
+
+      .hero-badge {
+        font-size: 0.7rem;
+      }
+
+      .container {
+        padding: 0 1rem;
+      }
+
+      .floating-card {
+        max-width: 260px;
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER & NAV ========== -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon">Q</span>
+        MCQ<span>Mastery</span>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#subjects">Subjects</a></li>
+          <li><a href="#exam-prep">Exam Prep</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">Trusted by thousands of learners</div>
+          <h1 id="hero-heading">Sharpen Your Knowledge with Premium MCQ Practice</h1>
+          <p class="subheadline">
+            Prepare smarter for competitive exams, government job tests, and university entry assessments with curated multiple-choice questions, instant feedback, and a powerful self-paced learning experience.
+          </p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="floating-card">
+            <div class="card-line medium"></div>
+            <div class="card-line short"></div>
+            <div class="card-highlight"></div>
+            <div class="card-line medium"></div>
+            <div class="card-line short"></div>
+            <span class="card-tag">Live Feedback</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== INTRODUCTION ========== -->
+    <section class="intro" aria-labelledby="intro-heading">
+      <div class="container intro-content">
+        <h2 id="intro-heading">Why Online MCQ Practice Matters</h2>
+        <p>
+          Multiple-choice questions are the backbone of most competitive exams, and regular online practice is one of the most effective ways to build confidence and accuracy. A well-structured MCQ platform helps you revise key concepts, simulate real test conditions, and track your progress over time. Whether you are preparing for a government job, a university entry test, or simply want to strengthen your academic foundation, consistent practice with high-quality questions makes a measurable difference. <a href="https://mcqs360.com/">Mcqs360</a> offers an extensive, subject-organized question bank that allows learners to practice at their own pace, receive instant answer feedback, and focus on the areas that need the most attention — all from the convenience of any internet-connected device.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== POPULAR SUBJECTS ========== -->
+    <section class="subjects" id="subjects" aria-labelledby="subjects-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="subjects-heading">Popular Subjects</h2>
+          <p>Explore our most-accessed categories, each packed with carefully curated MCQs designed to match exam patterns and academic standards.</p>
+        </div>
+        <div class="subjects-grid">
+          <article class="subject-card">
+            <div class="subject-icon" aria-hidden="true">E</div>
+            <h3>English</h3>
+            <p>Grammar, vocabulary, synonyms, antonyms, and comprehension for all competitive levels.</p>
+          </article>
+          <article class="subject-card">
+            <div class="subject-icon" aria-hidden="true">G</div>
+            <h3>General Knowledge</h3>
+            <p>World affairs, geography, history, and everyday facts to keep you globally aware.</p>
+          </article>
+          <article class="subject-card">
+            <div class="subject-icon" aria-hidden="true">C</div>
+            <h3>Computer Science</h3>
+            <p>Fundamentals, networking, programming concepts, and IT literacy for modern exams.</p>
+          </article>
+          <article class="subject-card">
+            <div class="subject-icon" aria-hidden="true">M</div>
+            <h3>Mathematics</h3>
+            <p>Arithmetic, algebra, geometry, and problem-solving techniques with step-by-step clarity.</p>
+          </article>
+          <article class="subject-card">
+            <div class="subject-icon" aria-hidden="true">P</div>
+            <h3>Pakistan Studies</h3>
+            <p>History, culture, and constitutional development tailored for national exams.</p>
+          </article>
+          <article class="subject-card">
+            <div class="subject-icon" aria-hidden="true">I</div>
+            <h3>Islamic Studies</h3>
+            <p>Core teachings, history, and ethical principles presented in an accessible MCQ format.</p>
+          </article>
+          <article class="subject-card">
+            <div class="subject-icon" aria-hidden="true">B</div>
+            <h3>Biology</h3>
+            <p>Cell biology, human anatomy, genetics, and ecology for medical and science entry tests.</p>
+          </article>
+          <article class="subject-card">
+            <div class="subject-icon" aria-hidden="true">CA</div>
+            <h3>Current Affairs</h3>
+            <p>Up-to-date national and international developments, policies, and key global events.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXAM PREPARATION ========== -->
+    <section class="exam-prep" id="exam-prep" aria-labelledby="exam-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="exam-heading">Exam Preparation That Fits Your Goals</h2>
+          <p>Whether you are aiming for a top score in a competitive test or building a strong academic base, our practice sets are organized around the exams that matter most.</p>
+        </div>
+        <div class="exam-grid">
+          <article class="exam-item">
+            <h3><span>01</span> Competitive Examinations</h3>
+            <p>Prepare for high-stakes competitive exams with timed practice sets, pattern-based questions, and performance insights that highlight your strongest and weakest areas.</p>
+          </article>
+          <article class="exam-item">
+            <h3><span>02</span> Government Job Tests</h3>
+            <p>Get exam-ready for public-sector recruitment with subject-specific MCQs covering general knowledge, English, quantitative reasoning, and current affairs.</p>
+          </article>
+          <article class="exam-item">
+            <h3><span>03</span> University Entry Tests</h3>
+            <p>Build the speed and accuracy required for university admissions with targeted practice in mathematics, biology, computer science, and more.</p>
+          </article>
+          <article class="exam-item">
+            <h3><span>04</span> General Academic Practice</h3>
+            <p>Strengthen your classroom learning at any level with topic-wise quizzes that reinforce concepts and make revision more engaging and effective.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== KEY FEATURES ========== -->
+    <section class="features" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="features-heading">Key Features</h2>
+          <p>Designed for modern learners who value flexibility, clarity, and immediate results.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">📘</span>
+            <h3>Self-Paced Learning</h3>
+            <p>Study at your own rhythm, revisit difficult topics anytime, and build a preparation routine that fits your schedule.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">⚡</span>
+            <h3>Instant Answer Feedback</h3>
+            <p>Understand mistakes immediately with clear answer keys and explanations that turn every attempt into a learning moment.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">📂</span>
+            <h3>Subject-Based Practice</h3>
+            <p>Focus on one subject at a time or mix topics to simulate a full exam, with well-organized categories for every need.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">🌐</span>
+            <h3>Convenient Online Access</h3>
+            <p>Practice from any device with a browser — no downloads, no installations, and no complicated setup required.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BENEFITS OF MCQ PRACTICE ========== -->
+    <section class="benefits" aria-labelledby="benefits-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="benefits-heading">Benefits of Regular MCQ Practice</h2>
+          <p>Consistent practice does more than improve scores — it builds lasting confidence and sharper thinking.</p>
+        </div>
+        <div class="benefits-grid">
+          <ul class="benefit-list">
+            <li>
+              <span class="benefit-check" aria-hidden="true">✓</span>
+              <div>
+                <h3>Strengthen Knowledge Retention</h3>
+                <p>Frequent exposure to core concepts and facts helps move information into long-term memory.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-check" aria-hidden="true">✓</span>
+              <div>
+                <h3>Identify Weak Areas Early</h3>
+                <p>Topic-wise feedback reveals exactly where you need more study time before the real exam.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-check" aria-hidden="true">✓</span>
+              <div>
+                <h3>Improve Speed and Accuracy</h3>
+                <p>Regular timed practice trains your brain to make faster, more reliable decisions under pressure.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-check" aria-hidden="true">✓</span>
+              <div>
+                <h3>Reduce Exam Anxiety</h3>
+                <p>Familiarity with question styles and test formats leads to calmer, more focused performance.</p>
+              </div>
+            </li>
+          </ul>
+          <aside class="benefits-highlight">
+            <h3>Practice with Purpose</h3>
+            <p>
+              A study plan built around short, daily MCQ sessions is far more effective than last-minute cramming. By answering a mix of easy, moderate, and challenging questions, you develop a balanced understanding of each subject. Over time, this approach transforms scattered knowledge into a structured, exam-ready skill set — and makes the learning process feel rewarding rather than overwhelming.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FREQUENTLY ASKED QUESTIONS ========== -->
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <p>Quick answers to common questions about online MCQ practice and exam preparation.</p>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>How can online MCQs help me prepare for exams?</h3>
+            <p>Online MCQs let you practice anywhere, receive instant feedback, and focus on specific subjects. This flexible, repetitive approach is proven to improve retention and test performance.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Are the practice questions updated regularly?</h3>
+            <p>Yes, a quality platform continually refreshes its question bank to reflect current exam patterns, recent events, and changes in syllabus requirements.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Can I track my progress over time?</h3>
+            <p>Most modern MCQ platforms include performance summaries that show accuracy by subject and help you identify which topics need more attention.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Is online MCQ practice suitable for beginners?</h3>
+            <p>Absolutely. Beginners can start with easier topics and gradually move to advanced questions, building confidence at a comfortable pace.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Do I need to create an account to practice?</h3>
+            <p>Many platforms offer free access to a selection of questions, while a registered account may unlock full sets, progress tracking, and additional features.</p>
+          </article>
+          <article class="faq-item">
+            <h3>How often should I practice MCQs?</h3>
+            <p>Short, consistent sessions — even 15 to 30 minutes a day — are more effective than occasional long study marathons. Regularity is the key to long-term improvement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONCLUSION ========== -->
+    <section class="conclusion" aria-labelledby="conclusion-heading">
+      <div class="container">
+        <h2 id="conclusion-heading">Start Your Preparation Journey Today</h2>
+        <p>
+          Every successful exam attempt begins with a smart, consistent study routine. With well-organized MCQ practice, instant feedback, and subject-wise focus, you can turn scattered preparation into a confident, goal-oriented plan. Explore the subjects, build your speed, and walk into your next exam knowing you have prepared with purpose.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">Q</span>
+            MCQ<span>Mastery</span>
+          </div>
+          <p>Premium MCQ practice and exam preparation resources for learners who want to study smarter, not harder.</p>
+        </div>
+        <div>
+          <h4>Study</h4>
+          <ul>
+            <li>Popular Subjects</li>
+            <li>Exam Preparation</li>
+            <li>Key Features</li>
+            <li>Benefits of Practice</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li>FAQs</li>
+            <li>Learning Tips</li>
+            <li>Accessibility</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 MCQ Mastery. All rights reserved. Built for learners, powered by practice.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
